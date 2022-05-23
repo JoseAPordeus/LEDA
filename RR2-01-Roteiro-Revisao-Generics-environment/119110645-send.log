@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-05-23T19:36:36.021-0300</date>
+  <logger>JOSE ALISSON ARAUJO PORDEUS</logger>
+  <level>FINE</level>
+  <message>File 119110645-JOSE ALISSON ARAUJO PORDEUS.zip was received. It was sent by JOSE ALISSON ARAUJO PORDEUS from IP 192.168.1.9 at 23-05-2022 19*36*35</message>
+</record>
