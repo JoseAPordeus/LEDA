@@ -7,13 +7,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sorting.AbstractSorting;
-import sorting.simpleSorting.BubbleSort;
-import sorting.simpleSorting.InsertionSort;
-import sorting.simpleSorting.SelectionSort;
-import sorting.variationsOfBubblesort.BidirectionalBubbleSort;
-import sorting.variationsOfBubblesort.RecursiveBubbleSort;
-import sorting.variationsOfInsertionSort.RecursiveInsertionSort;
-import sorting.variationsOfSelectionsort.RecursiveSelectionSort;
+import sorting.divideAndConquer.MergeSort;
+import sorting.divideAndConquer.QuickSort;
 
 public class StudentSortingTest {
 
@@ -45,13 +40,8 @@ public class StudentSortingTest {
 	private void getImplementation() {
 		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
 		// null
-		this.implementation = new BubbleSort<Integer>();
-		this.implementation = new InsertionSort<Integer>();
-		this.implementation = new SelectionSort<Integer>();
-		this.implementation = new BidirectionalBubbleSort<Integer>();
-		this.implementation = new RecursiveBubbleSort<Integer>();
-		this.implementation = new RecursiveSelectionSort<Integer>();
-		this.implementation = new RecursiveInsertionSort<Integer>();
+		this.implementation = new MergeSort<Integer>();
+		this.implementation = new QuickSort<Integer>();
 		//Assert.fail("Implementation not provided");
 	}
 
@@ -64,11 +54,13 @@ public class StudentSortingTest {
 	}
 
 	public void populaVetorRepetido(Integer[] arrayPadrao) {
-		this.vetorValoresRepetidos = Arrays.copyOf(arrayPadrao, arrayPadrao.length);
+		this.vetorValoresRepetidos = Arrays.copyOf(arrayPadrao,
+				arrayPadrao.length);
 	}
 
 	public void populaVetorIgual(Integer[] arrayPadrao) {
-		this.vetorValoresIguais = Arrays.copyOf(arrayPadrao, arrayPadrao.length);
+		this.vetorValoresIguais = Arrays
+				.copyOf(arrayPadrao, arrayPadrao.length);
 	}
 
 	// FIM DOS METODOS AUXILIARES DA INICIALIZAÇÃO
