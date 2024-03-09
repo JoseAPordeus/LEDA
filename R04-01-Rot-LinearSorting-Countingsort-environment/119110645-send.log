@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-03-08T12:15:27.914-0300</date>
+  <logger>JOSE ALISSON ARAUJO PORDEUS</logger>
+  <level>FINE</level>
+  <message>File 119110645-JOSE ALISSON ARAUJO PORDEUS.zip was received. It was sent by JOSE ALISSON ARAUJO PORDEUS from IP 150.165.74.40 at 08-03-2024 12*15*27</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-03-09T00:13:50.830-0300</date>
+  <logger>JOSE ALISSON ARAUJO PORDEUS</logger>
+  <level>FINE</level>
+  <message>File 119110645-JOSE ALISSON ARAUJO PORDEUS.zip was received. It was sent by JOSE ALISSON ARAUJO PORDEUS from IP 172.23.190.130 at 09-03-2024 00*13*50</message>
+</record>

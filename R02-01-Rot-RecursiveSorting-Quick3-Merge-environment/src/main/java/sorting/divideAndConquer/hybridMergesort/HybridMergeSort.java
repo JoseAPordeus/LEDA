@@ -1,5 +1,7 @@
 package sorting.divideAndConquer.hybridMergesort;
 
+import java.util.Arrays;
+
 import sorting.AbstractSorting;
 
 /**
@@ -30,7 +32,73 @@ public class HybridMergeSort<T extends Comparable<T>> extends
 	protected static int INSERTIONSORT_APPLICATIONS = 0;
 
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		MERGESORT_APPLICATIONS = 0;
+		INSERTIONSORT_APPLICATIONS = 0;
+		hybridMergeSort(array, leftIndex, rightIndex);
+	}
+
+	private void hybridMergeSort(T[] array, int leftIndex, int rightIndex) {
+
+		if ((leftIndex < 0) || (rightIndex >= array.length)) 
+			return;
+
+		if (rightIndex - leftIndex < 0) 
+			return;
+		
+		if ((rightIndex - leftIndex) + 1 > SIZE_LIMIT) {
+			int middle = (leftIndex + rightIndex) / 2;
+
+			hybridMergeSort(array, leftIndex, middle);
+			hybridMergeSort(array, middle + 1, rightIndex);
+			merge(array, leftIndex, middle, rightIndex);
+		} else {
+			insertionSort(array, leftIndex, rightIndex);
+		}
+	}
+	
+	private void merge(T[] array, int leftIndex, int middle, int rightIndex) {
+		MERGESORT_APPLICATIONS ++;
+		T[] arrayAux = Arrays.copyOf(array, array.length);
+
+		int i = leftIndex;
+		int j = middle + 1;
+		int indexResult = leftIndex;
+
+		while (i <= middle && j <= rightIndex) {
+			if (arrayAux[i].compareTo(arrayAux[j]) <= 0) {
+				array[indexResult] = arrayAux[i];
+				i++;
+			} else {
+				array[indexResult] = arrayAux[j];
+				j++;
+			}
+			indexResult++;
+		}
+
+		while (i <= middle) {
+			array[indexResult] = arrayAux[i];
+			i++;
+			indexResult++;
+		}
+		while (j <= rightIndex) {
+			array[indexResult] = arrayAux[j];
+			j++;
+			indexResult++;
+		}
+	}
+
+	private void insertionSort(T[] array, int leftIndex, int rightIndex) {
+		INSERTIONSORT_APPLICATIONS++;
+		for (int i = leftIndex + 1; i <= rightIndex; i++) {
+			
+			int aux = i - 1;
+			T key = array[i];
+			
+			while (aux >= leftIndex && array[aux].compareTo(key) > 0) {
+				array[aux+1] = array[aux];
+				aux--;	
+			}
+			array[aux+1] = key;
+		}
 	}
 }
