@@ -26,7 +26,7 @@ public class CountingSort extends AbstractSorting<Integer> {
 		
 		if (leftIndex < rightIndex) {
 
-			int max = findMaxValue(array, leftIndex, rightIndex);
+			int max = getMaxValue(array, leftIndex, rightIndex);
 
 			int[] counters = new int[max + 1];
 			Integer[] arrayAux = Arrays.copyOf(array, array.length);
@@ -46,7 +46,7 @@ public class CountingSort extends AbstractSorting<Integer> {
 		}
 	}
 
-	private int findMaxValue(Integer[] array, int leftIndex, int rightIndex) {
+	private int getMaxValue(Integer[] array, int leftIndex, int rightIndex) {
 		int max = array[leftIndex];
 		for (int i = leftIndex; i <= rightIndex; i++) {
 			if (array[i] > max) {
