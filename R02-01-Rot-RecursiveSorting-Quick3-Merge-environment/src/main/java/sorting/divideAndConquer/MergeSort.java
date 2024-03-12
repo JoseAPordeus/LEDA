@@ -5,7 +5,7 @@ import sorting.AbstractSorting;
 /**
  * Merge sort is based on the divide-and-conquer paradigm. The algorithm
  * consists of recursively dividing the unsorted list in the middle, sorting
- * each sublist, and then merging them into one single sorted list. Notice that
+ * each subList, and then merging them into one single sorted list. Notice that
  * if the list has length == 1, it is already sorted.
  */
 public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
@@ -28,6 +28,7 @@ public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
 }
 
 	private void marge(T[] array, int leftIndex, int middle, int rightIndex) {
+		@SuppressWarnings("unchecked")
 		T[] arrayAux = (T[]) new Comparable[array.length];
 		for (int i = leftIndex; i <= rightIndex; i++) {
 			arrayAux[i] = array[i];
@@ -53,6 +54,7 @@ public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
 			i++;
 			indexResult++;
 		}
+		
 		while (j <= rightIndex) {
 			array[indexResult] = arrayAux[j];
 			j++;

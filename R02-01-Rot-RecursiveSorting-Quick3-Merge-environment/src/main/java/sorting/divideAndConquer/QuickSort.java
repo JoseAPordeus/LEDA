@@ -37,8 +37,8 @@ public class QuickSort<T extends Comparable<T>> extends AbstractSorting<T> {
 				Util.swap(array, i, j);
 			}
 		}
-		Util.swap(array, pivot, i);
 
+		Util.swap(array, pivot, i);
 		return i;
 	}
 }
