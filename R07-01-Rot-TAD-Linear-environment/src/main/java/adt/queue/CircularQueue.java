@@ -35,7 +35,7 @@ public class CircularQueue<T> implements Queue<T> {
 			throw new QueueUnderflowException();
 		}
 
-		T resp = array[head];
+		T resp = head();
 		head = (head + 1) % array.length;
 		elements--;
 
@@ -62,7 +62,7 @@ public class CircularQueue<T> implements Queue<T> {
 
 	@Override
 	public boolean isFull() {
-		return this.elements == array.length-1;
+		return this.elements == (array.length-1);
 	}
 
 }
