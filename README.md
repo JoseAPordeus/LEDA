@@ -12,7 +12,10 @@ Roteiro 06
 Roteiro 07	
 Roteiro 08
 Roteiro 09	
-Roteiro 10	
+Roteiro 10
+Roteiro 11
+Roteiro 12
+Roteiro 13
 
 Guia dos Roteiros
 
@@ -58,7 +61,7 @@ Listas encadeadas - abordagem recursiva (parte 1)
 Listas encadeadas - abordagem recursiva (parte 2)
 Guia do roteiro
 
-Roteiro 07
+Roteiro 10
 Roteiro relacionado ao uso de tabela hash
 Introdução a tabelas hash
 Endereçamento fechado (parte 1)
@@ -68,7 +71,7 @@ Endereçamento aberto (parte 2)
 Design de implementação
 Guia do roteiro
 
-Roteiro 08
+Roteiro 11
 Árvore binária de busca
 Árvore Binária (introdução)
 Árvore Binária (percursos)
@@ -77,7 +80,7 @@ Roteiro 08
 Guia do roteiro (parte 1)
 Guia do roteiro (parte 2)
 
-Roteiro 09
+Roteiro 12
 Heap binário
 Heap Binária (introdução)
 Heapify e Construir heap
@@ -86,7 +89,7 @@ Heap binário (aplicativos)
 Heap binário (implementação)
 Guia do roteiro
 
-Roteiro 10
+Roteiro 13
 Árvore balanceada AVL
 Árvore AVL (Introdução)
 Árvore AVL (operações de rotação)
